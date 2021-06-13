@@ -1,2 +1,2 @@
-# chess-walk
+# Random Chess Walk
 A chess random walk
