@@ -13,7 +13,7 @@ class ChessBoard(object):
     def move_piece(piece):
         if not piece.isalive():
             raise ValueError("This piece is dead")
-        # TODO: move drunk move...
+        # TODO: organise movement sync with Location and ChessPieces
 
     def get_location(self, piece):
         if piece not in self.pieces:
