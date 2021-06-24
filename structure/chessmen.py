@@ -4,17 +4,27 @@ import random
 
 class ChessPiece(ABC):
     ID = 0
+    COLORS = ['white', 'black']
 
-    def __init__(self, alive=True):
-        self.piece_type = self.__class__
-        self.alive = alive
+    def __init__(self, color, alive=True):
         self.id = ChessPiece.ID
+        self.piece_type = self.__class__
+        self.color = color
+        self.alive = alive
 
     def __str__(self):
         return f"{self.get_piece_type()}: {int(self.is_alive())}"
 
     def get_piece_type(self):
         return self.piece_type
+
+    def get_color(self):
+        return self.color
+
+    def set_color(self, new_color):
+        if new_color not in ChessPiece.COLORS:
+            raise ValueError('Chess pieces can only be white or black.')
+        self.color = new_color
 
     def is_alive(self):
         return self.alive
@@ -53,7 +63,7 @@ class Pawn(ChessPiece):
             # TODO: Make move on top of other
             pass
         elif self.get_move_number() == 0:
-            moves = [(0.0, 1.0), (0.0, 2.0)]
+            moves = (0.0, 1.0), (0.0, 2.0)
             return random.choice(moves)
         else:
             return tuple((0.0, 1.0))
