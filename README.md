@@ -1,2 +1,2 @@
 # Random Chess Walk
-A chess random walk
+A object-oriented chess random walk simulation in Python.
