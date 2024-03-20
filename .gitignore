@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+.venv
+.env
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.pyw
+*.pyz
+*.pyzw
+*.pycache
+__pycache__
+
+# PyCharm
+.idea
+*.iml
+*.iws
+*.ipr
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Visual Studio Code
+.vscode
